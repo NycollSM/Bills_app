@@ -13,13 +13,15 @@ function dialogForm (){
     const inputName = document.createElement('input');
     inputName.setAttribute('type', 'text');
     inputName.setAttribute('id', 'inputName');
+    inputName.setAttribute('class', 'dataForm');
 
     //Date 
     const labelDate = document.createElement('label');
     labelDate.innerText = 'Date';
     const inputDate = document.createElement('input');
     inputDate.setAttribute('type', 'date');
-    inputDate.setAttribute('id', 'inputDate')
+    inputDate.setAttribute('id', 'inputDate');
+    inputDate.setAttribute('class', 'dataForm');
 
     //email
     const labelEmail =  document.createElement('label');

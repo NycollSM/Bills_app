@@ -21,3 +21,9 @@
     } buttons();
 })();
 
+function render (){
+    for (let information of dataArray){
+        console.log(information);
+    }
+
+} render();

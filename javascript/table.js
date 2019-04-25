@@ -31,6 +31,27 @@ function renderDATA(){
     dataArray.push({Name: name, Date: date, Email: email, Description: description, Price: price, Quantity: quantity});
     // console.log(name, date, email, description, price, quantity);
     console.log(dataArray);
+    const td = document.createElement('td');
+        for (let information of dataArray){
+            const trName = document.createElement('tr');
+            trName.innerText = information.Name;
+            const trDate = document.createElement('tr');
+            trDate.innerText = information.Date;
+            const trPrice = document.createElement('tr');
+            trPrice.innerText = information.Price;
+            console.log('information',information);
+            td.setAttribute( 'draggable','true');
+            td.setAttribute('ondragstart', "event.dataTransfer.setData('text/plain',null)");
+
+            //rendering data in dom 
+            td.appendChild(trName);
+            td.appendChild(trDate);
+            td.appendChild(trPrice);
+            console.log('td' , td);
+            //this.tableGenerator.table.appendChild(td);
+        }
+    
+   
     
     
 }
