@@ -83,4 +83,22 @@ input {
   float: left;
 }
 
+#tableContainer {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+table {
+  margin: 0 auto;
+}
+
+th {
+  font-size: 22px;
+  color: #5bb4dd;
+}
+
+th, td {
+  padding: 10% 35%;
+}
+
 /*# sourceMappingURL=styles.css.map */

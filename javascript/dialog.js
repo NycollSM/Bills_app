@@ -12,36 +12,42 @@ function dialogForm (){
     labelName.innerText= 'Name';
     const inputName = document.createElement('input');
     inputName.setAttribute('type', 'text');
+    inputName.setAttribute('id', 'inputName');
 
     //Date 
     const labelDate = document.createElement('label');
     labelDate.innerText = 'Date';
     const inputDate = document.createElement('input');
     inputDate.setAttribute('type', 'date');
+    inputDate.setAttribute('id', 'inputDate')
 
     //email
     const labelEmail =  document.createElement('label');
     labelEmail.innerText = 'Email';
     const inputEmail =  document.createElement('input');
     inputEmail.setAttribute('type', 'text');
+    inputEmail.setAttribute('id','email');
 
     //Description 
     const labelDescription = document.createElement('label');
     labelDescription.innerText = 'Description';
     const inputDescript = document.createElement('input');
     inputDescript.setAttribute('type', 'text');
+    inputDescript.setAttribute('id', 'description');
 
     //Price
     const labelPrice = document.createElement('label');
     labelPrice.innerText = 'Price';
     const inputPrice = document.createElement('input');
     inputPrice.setAttribute('type', 'number');
+    inputPrice.setAttribute('id', 'price');
 
     //Quantity 
     const labelQuantity = document.createElement('label');
     labelQuantity.innerText = 'Quantity';
     const inputQuant = document.createElement('input');
     inputQuant.setAttribute('type', 'number');
+    inputQuant.setAttribute('id', 'quantity');
 
     //buttons (cancel, save)
     const cancelBtn = document.createElement('button');
@@ -67,10 +73,12 @@ function dialogForm (){
     form.appendChild(inputQuant);
     form.appendChild(cancelBtn);
     form.appendChild(saveBtn);
+    
     // adding form in dialog 
     dialog.appendChild(form);
     modalForm.appendChild(dialog);
-}
-console.log(saveBtn);
 
+    //Events
+    saveBtn.addEventListener('click', renderDATA);
+}
 createBtn.addEventListener('click', dialogForm);
